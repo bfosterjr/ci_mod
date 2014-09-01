@@ -164,8 +164,8 @@ _getRegDWord
     queryTable[0].EntryContext = pvalue;
     queryTable[0].DefaultType = REG_DWORD;
     queryTable[0].DefaultData = &temp;
-    queryTable[0].DefaultLength = sizeof(ULONG);
-    queryTable[0].Flags = RTL_QUERY_REGISTRY_DIRECT | RTL_QUERY_REGISTRY_TYPECHECK;
+    queryTable[0].DefaultLength = sizeof(temp);
+    queryTable[0].Flags = RTL_QUERY_REGISTRY_DIRECT;
 
     //end the table entries
     queryTable[1].QueryRoutine = NULL;

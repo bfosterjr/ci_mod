@@ -35,9 +35,9 @@ main
     }
     else
     {
+        printf("[+]Please press 'T' to toggle patching -or- 'Q' quit: ");
         while (EOF != (input = getchar()))
         {
-            printf("[+]Please press 'T' to toggle patching -or- 'Q' quit: ");
             if ('T' == toupper(input))
             {
                 if (!DeviceIoControl(hDev, (DWORD)IOCTL_CI_MOD_TOGGLE, &dummyInput, sizeof(dummyInput),
