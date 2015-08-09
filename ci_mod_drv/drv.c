@@ -6,6 +6,7 @@
 #define WINAPI __stdcall
 #endif
 
+
 typedef ULONG SYSTEM_INFORMATION_CLASS;
 
 // Class 11
@@ -443,6 +444,10 @@ _deviceIoctl
                 *((PULONG)outBuf) = g_patched ? 1 : 0;
                 Irp->IoStatus.Information = sizeof(ULONG);
             }
+            break;
+        case IOCTL_CI_MOD_CRASH:
+            //just break..  :)
+            __debugbreak();
             break;
         default:
             break;
